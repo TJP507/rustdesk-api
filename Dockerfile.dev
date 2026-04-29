@@ -42,20 +42,11 @@ RUN if [ "$COUNTRY" = "CN" ] ; then \
     fi && \
     apk update && apk add --no-cache git
 
-ARG FRONTEND_GIT_REPO=https://github.com/lejianwen/rustdesk-api-web.git
+ARG FRONTEND_GIT_REPO=https://github.com/TJP507/rustdesk-api-web.git
 ARG FRONTEND_GIT_BRANCH=master
-# Clone the frontend repository
+# Clone the frontend repository (TJP507 fork — English patches already applied)
 
 RUN git clone -b $FRONTEND_GIT_BRANCH $FRONTEND_GIT_REPO .
-
-# Apply English-language patches over the cloned frontend
-COPY ./frontend-patches/src/main.js ./src/main.js
-COPY ./frontend-patches/src/store/app.js ./src/store/app.js
-COPY ./frontend-patches/src/views/tag/index.js ./src/views/tag/index.js
-COPY ./frontend-patches/src/views/rustdesk/blacklist.vue ./src/views/rustdesk/blacklist.vue
-COPY ./frontend-patches/src/views/rustdesk/blocklist.vue ./src/views/rustdesk/blocklist.vue
-COPY ./frontend-patches/src/views/index/index.vue ./src/views/index/index.vue
-COPY ./frontend-patches/src/components/form/upload/imagesUpload.vue ./src/components/form/upload/imagesUpload.vue
 
 # Install required tools without caching index to minimize image size
 RUN if [ "$COUNTRY" = "CN" ] ; then \
