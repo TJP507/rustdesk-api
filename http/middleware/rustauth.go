@@ -9,7 +9,7 @@ import (
 func RustAuth() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		//fmt.Println(c.Request.URL, c.Request.Header)
-		//获取HTTP_AUTHORIZATION
+		// Get HTTP_AUTHORIZATION header
 		token := c.GetHeader("Authorization")
 		if token == "" {
 			c.JSON(401, gin.H{
@@ -25,13 +25,13 @@ func RustAuth() gin.HandlerFunc {
 			c.Abort()
 			return
 		}
-		//提取token，格式是Bearer {token}
-		//这里只是简单的提取
+		// Extract the token; format is "Bearer {token}"
+		// This is a simple extraction
 		token = token[7:]
 
-		//验证token
+		// Validate the token
 
-		//检查是否设置了jwt key
+		// Check whether a JWT key has been configured
 		if len(global.Jwt.Key) > 0 {
 			uid, _ := service.AllService.UserService.VerifyJWT(token)
 			if uid == 0 {

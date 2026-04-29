@@ -13,16 +13,16 @@ import (
 type Audit struct {
 }
 
-// ConnList 列表
-// @Tags 链接日志
-// @Summary 链接日志列表
-// @Description 链接日志列表
+// ConnList List
+// @Tags ConnectionLog
+// @Summary Connection log list
+// @Description Connection log list
 // @Accept  json
 // @Produce  json
-// @Param page query int false "页码"
-// @Param page_size query int false "页大小"
-// @Param peer_id query int false "目标设备"
-// @Param from_peer query int false "来源设备"
+// @Param page query int false "Page number"
+// @Param page_size query int false "Page size"
+// @Param peer_id query int false "Target device"
+// @Param from_peer query int false "Source device"
 // @Success 200 {object} response.Response{data=model.AuditConnList}
 // @Failure 500 {object} response.Response
 // @Router /admin/audit_conn/list [get]
@@ -45,13 +45,13 @@ func (a *Audit) ConnList(c *gin.Context) {
 	response.Success(c, res)
 }
 
-// ConnDelete 删除
-// @Tags 链接日志
-// @Summary 链接日志删除
-// @Description 链接日志删除
+// ConnDelete Delete
+// @Tags ConnectionLog
+// @Summary Delete connection log
+// @Description Delete connection log
 // @Accept  json
 // @Produce  json
-// @Param body body model.AuditConn true "链接日志信息"
+// @Param body body model.AuditConn true "Connection log information"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/audit_conn/delete [post]
@@ -81,13 +81,13 @@ func (a *Audit) ConnDelete(c *gin.Context) {
 	response.Fail(c, 101, response.TranslateMsg(c, "ItemNotFound"))
 }
 
-// BatchConnDelete 删除
-// @Tags 链接日志
-// @Summary 链接日志批量删除
-// @Description 链接日志批量删除
+// BatchConnDelete Delete
+// @Tags ConnectionLog
+// @Summary Batch delete connection logs
+// @Description Batch delete connection logs
 // @Accept  json
 // @Produce  json
-// @Param body body admin.AuditConnLogIds true "链接日志"
+// @Param body body admin.AuditConnLogIds true "Connection log"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/audit_conn/batchDelete [post]
@@ -112,16 +112,16 @@ func (a *Audit) BatchConnDelete(c *gin.Context) {
 	return
 }
 
-// FileList 列表
-// @Tags 文件日志
-// @Summary 文件日志列表
-// @Description 文件日志列表
+// FileList List
+// @Tags FileLog
+// @Summary File log list
+// @Description File log list
 // @Accept  json
 // @Produce  json
-// @Param page query int false "页码"
-// @Param page_size query int false "页大小"
-// @Param peer_id query int false "目标设备"
-// @Param from_peer query int false "来源设备"
+// @Param page query int false "Page number"
+// @Param page_size query int false "Page size"
+// @Param peer_id query int false "Target device"
+// @Param from_peer query int false "Source device"
 // @Success 200 {object} response.Response{data=model.AuditFileList}
 // @Failure 500 {object} response.Response
 // @Router /admin/audit_file/list [get]
@@ -144,13 +144,13 @@ func (a *Audit) FileList(c *gin.Context) {
 	response.Success(c, res)
 }
 
-// FileDelete 删除
-// @Tags 文件日志
-// @Summary 文件日志删除
-// @Description 文件日志删除
+// FileDelete Delete
+// @Tags FileLog
+// @Summary Delete file log
+// @Description Delete file log
 // @Accept  json
 // @Produce  json
-// @Param body body model.AuditFile true "文件日志信息"
+// @Param body body model.AuditFile true "File log information"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/audit_file/delete [post]
@@ -180,13 +180,13 @@ func (a *Audit) FileDelete(c *gin.Context) {
 	response.Fail(c, 101, response.TranslateMsg(c, "ItemNotFound"))
 }
 
-// BatchFileDelete 删除
-// @Tags 文件日志
-// @Summary 文件日志批量删除
-// @Description 文件日志批量删除
+// BatchFileDelete Delete
+// @Tags FileLog
+// @Summary Batch delete file logs
+// @Description Batch delete file logs
 // @Accept  json
 // @Produce  json
-// @Param body body admin.AuditFileLogIds true "文件日志"
+// @Param body body admin.AuditFileLogIds true "File log"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/audit_file/batchDelete [post]

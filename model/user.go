@@ -15,9 +15,9 @@ type User struct {
 	TimeModel
 }
 
-// BeforeSave 钩子用于确保 email 字段有合理的默认值
+// BeforeSave hook ensures the email field has a sensible default value
 //func (u *User) BeforeSave(tx *gorm.DB) (err error) {
-//	// 如果 email 为空，设置为默认值
+//	// If email is empty, set a default value
 //	if u.Email == "" {
 //		u.Email = fmt.Sprintf("%s@example.com", u.Username)
 //	}

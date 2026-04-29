@@ -14,10 +14,10 @@ import (
 type AddressBookCollection struct {
 }
 
-// Detail 地址簿名称
-// @Tags 地址簿名称
-// @Summary 地址簿名称详情
-// @Description 地址簿名称详情
+// Detail AddressBookCollection
+// @Tags AddressBookCollection
+// @Summary Address book collection detail
+// @Description Address book collection detail
 // @Accept  json
 // @Produce  json
 // @Param id path int true "ID"
@@ -37,13 +37,13 @@ func (abc *AddressBookCollection) Detail(c *gin.Context) {
 	return
 }
 
-// Create 创建地址簿名称
-// @Tags 地址簿名称
-// @Summary 创建地址簿名称
-// @Description 创建地址簿名称
+// Create Create address book collection
+// @Tags AddressBookCollection
+// @Summary Create address book collection
+// @Description Create address book collection
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollection true "地址簿名称信息"
+// @Param body body model.AddressBookCollection true "Address book collection information"
 // @Success 200 {object} response.Response{data=model.AddressBookCollection}
 // @Failure 500 {object} response.Response
 // @Router /admin/address_book_collection/create [post]
@@ -72,16 +72,16 @@ func (abc *AddressBookCollection) Create(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// List 列表
-// @Tags 地址簿名称
-// @Summary 地址簿名称列表
-// @Description 地址簿名称列表
+// List List
+// @Tags AddressBookCollection
+// @Summary Address book collection list
+// @Description Address book collection list
 // @Accept  json
 // @Produce  json
-// @Param page query int false "页码"
-// @Param page_size query int false "页大小"
-// @Param is_my query int false "是否是我的"
-// @Param user_id query int false "用户id"
+// @Param page query int false "Page number"
+// @Param page_size query int false "Page size"
+// @Param is_my query int false "Whether it is mine"
+// @Param user_id query int false "User ID"
 // @Success 200 {object} response.Response{data=model.AddressBookCollectionList}
 // @Failure 500 {object} response.Response
 // @Router /admin/address_book_collection/list [get]
@@ -100,13 +100,13 @@ func (abc *AddressBookCollection) List(c *gin.Context) {
 	response.Success(c, res)
 }
 
-// Update 编辑
-// @Tags 地址簿名称
-// @Summary 地址簿名称编辑
-// @Description 地址簿名称编辑
+// Update Edit
+// @Tags AddressBookCollection
+// @Summary Edit address book collection
+// @Description Edit address book collection
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollection true "地址簿名称信息"
+// @Param body body model.AddressBookCollection true "Address book collection information"
 // @Success 200 {object} response.Response{data=model.AddressBookCollection}
 // @Failure 500 {object} response.Response
 // @Router /admin/address_book_collection/update [post]
@@ -135,13 +135,13 @@ func (abc *AddressBookCollection) Update(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// Delete 删除
-// @Tags 地址簿名称
-// @Summary 地址簿名称删除
-// @Description 地址簿名称删除
+// Delete Delete
+// @Tags AddressBookCollection
+// @Summary Delete address book collection
+// @Description Delete address book collection
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollection true "地址簿名称信息"
+// @Param body body model.AddressBookCollection true "Address book collection information"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/address_book_collection/delete [post]

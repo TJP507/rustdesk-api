@@ -22,7 +22,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "批量创建地址簿",
+                "description": "Batch create address books",
                 "consumes": [
                     "application/json"
                 ],
@@ -30,12 +30,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "批量创建地址簿",
+                "summary": "Batch create address books",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -79,7 +79,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建地址簿",
+                "description": "CreateAddress Book",
                 "consumes": [
                     "application/json"
                 ],
@@ -87,12 +87,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "创建地址簿",
+                "summary": "CreateAddress Book",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -136,7 +136,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿删除",
+                "description": "Address BookDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -144,12 +144,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "地址簿删除",
+                "summary": "Address BookDelete",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -181,7 +181,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿详情",
+                "description": "Address BookDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -189,9 +189,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "地址簿详情",
+                "summary": "Address BookDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -236,7 +236,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿列表",
+                "description": "Address BookList",
                 "consumes": [
                     "application/json"
                 ],
@@ -244,31 +244,31 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "地址簿列表",
+                "summary": "Address BookList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "是否是我的",
+                        "description": "Whether it is mine",
                         "name": "is_my",
                         "in": "query"
                     }
@@ -308,7 +308,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿分享",
+                "description": "Share address book",
                 "consumes": [
                     "application/json"
                 ],
@@ -316,12 +316,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "地址簿分享",
+                "summary": "Share address book",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -353,7 +353,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿编辑",
+                "description": "Address BookEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -361,12 +361,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿"
+                    "Address Book"
                 ],
-                "summary": "地址簿编辑",
+                "summary": "Address BookEdit",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -410,7 +410,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建地址簿名称",
+                "description": "Create address book name",
                 "consumes": [
                     "application/json"
                 ],
@@ -418,12 +418,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿名称"
+                    "Address Book Name"
                 ],
-                "summary": "创建地址簿名称",
+                "summary": "Create address book name",
                 "parameters": [
                     {
-                        "description": "地址簿名称信息",
+                        "description": "Address Book NameInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -467,7 +467,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称删除",
+                "description": "Address Book NameDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -475,12 +475,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿名称"
+                    "Address Book Name"
                 ],
-                "summary": "地址簿名称删除",
+                "summary": "Address Book NameDelete",
                 "parameters": [
                     {
-                        "description": "地址簿名称信息",
+                        "description": "Address Book NameInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -512,7 +512,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称详情",
+                "description": "Address Book NameDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -520,9 +520,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿名称"
+                    "Address Book Name"
                 ],
-                "summary": "地址簿名称详情",
+                "summary": "Address Book NameDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -567,7 +567,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称列表",
+                "description": "Address Book NameList",
                 "consumes": [
                     "application/json"
                 ],
@@ -575,31 +575,31 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿名称"
+                    "Address Book Name"
                 ],
-                "summary": "地址簿名称列表",
+                "summary": "Address Book NameList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "是否是我的",
+                        "description": "Whether it is mine",
                         "name": "is_my",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -639,7 +639,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称编辑",
+                "description": "Address Book NameEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -647,12 +647,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿名称"
+                    "Address Book Name"
                 ],
-                "summary": "地址簿名称编辑",
+                "summary": "Address Book NameEdit",
                 "parameters": [
                     {
-                        "description": "地址簿名称信息",
+                        "description": "Address Book NameInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -696,7 +696,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建地址簿规则",
+                "description": "Create address book rule",
                 "consumes": [
                     "application/json"
                 ],
@@ -704,12 +704,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿规则"
+                    "Address Book Rule"
                 ],
-                "summary": "创建地址簿规则",
+                "summary": "Create address book rule",
                 "parameters": [
                     {
-                        "description": "地址簿规则信息",
+                        "description": "Address Book RuleInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -753,7 +753,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则删除",
+                "description": "Address Book RuleDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -761,12 +761,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿规则"
+                    "Address Book Rule"
                 ],
-                "summary": "地址簿规则删除",
+                "summary": "Address Book RuleDelete",
                 "parameters": [
                     {
-                        "description": "地址簿规则信息",
+                        "description": "Address Book RuleInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -798,7 +798,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则详情",
+                "description": "Address Book RuleDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -806,9 +806,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿规则"
+                    "Address Book Rule"
                 ],
-                "summary": "地址簿规则详情",
+                "summary": "Address Book RuleDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -853,7 +853,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则列表",
+                "description": "Address Book RuleList",
                 "consumes": [
                     "application/json"
                 ],
@@ -861,37 +861,37 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿规则"
+                    "Address Book Rule"
                 ],
-                "summary": "地址簿规则列表",
+                "summary": "Address Book RuleList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "是否是我的",
+                        "description": "Whether it is mine",
                         "name": "is_my",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "地址簿集合id",
+                        "description": "Address book collection ID",
                         "name": "collection_id",
                         "in": "query"
                     }
@@ -931,7 +931,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则编辑",
+                "description": "Address Book RuleEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -939,12 +939,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "地址簿规则"
+                    "Address Book Rule"
                 ],
-                "summary": "地址簿规则编辑",
+                "summary": "Address Book RuleEdit",
                 "parameters": [
                     {
-                        "description": "地址簿规则信息",
+                        "description": "Address Book RuleInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -988,7 +988,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "链接日志批量删除",
+                "description": "Batch delete connection logs",
                 "consumes": [
                     "application/json"
                 ],
@@ -996,12 +996,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "链接日志"
+                    "Connection Log"
                 ],
-                "summary": "链接日志批量删除",
+                "summary": "Batch delete connection logs",
                 "parameters": [
                     {
-                        "description": "链接日志",
+                        "description": "Connection Log",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1033,7 +1033,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "链接日志删除",
+                "description": "Connection LogDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -1041,12 +1041,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "链接日志"
+                    "Connection Log"
                 ],
-                "summary": "链接日志删除",
+                "summary": "Connection LogDelete",
                 "parameters": [
                     {
-                        "description": "链接日志信息",
+                        "description": "Connection LogInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1078,7 +1078,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "链接日志列表",
+                "description": "Connection LogList",
                 "consumes": [
                     "application/json"
                 ],
@@ -1086,31 +1086,31 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "链接日志"
+                    "Connection Log"
                 ],
-                "summary": "链接日志列表",
+                "summary": "Connection LogList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "目标设备",
+                        "description": "Target device",
                         "name": "peer_id",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "来源设备",
+                        "description": "Source device",
                         "name": "from_peer",
                         "in": "query"
                     }
@@ -1150,7 +1150,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "文件日志批量删除",
+                "description": "Batch delete file logs",
                 "consumes": [
                     "application/json"
                 ],
@@ -1158,12 +1158,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "文件日志"
+                    "File Log"
                 ],
-                "summary": "文件日志批量删除",
+                "summary": "Batch delete file logs",
                 "parameters": [
                     {
-                        "description": "文件日志",
+                        "description": "File Log",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1195,7 +1195,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "文件日志删除",
+                "description": "File LogDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -1203,12 +1203,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "文件日志"
+                    "File Log"
                 ],
-                "summary": "文件日志删除",
+                "summary": "File LogDelete",
                 "parameters": [
                     {
-                        "description": "文件日志信息",
+                        "description": "File LogInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1240,7 +1240,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "文件日志列表",
+                "description": "File LogList",
                 "consumes": [
                     "application/json"
                 ],
@@ -1248,31 +1248,31 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "文件日志"
+                    "File Log"
                 ],
-                "summary": "文件日志列表",
+                "summary": "File LogList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "目标设备",
+                        "description": "Target device",
                         "name": "peer_id",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "来源设备",
+                        "description": "Source device",
                         "name": "from_peer",
                         "in": "query"
                     }
@@ -1312,7 +1312,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "ADMIN服务配置",
+                "description": "ADMINService configuration",
                 "consumes": [
                     "application/json"
                 ],
@@ -1322,7 +1322,7 @@ const docTemplateadmin = `{
                 "tags": [
                     "ADMIN"
                 ],
-                "summary": "ADMIN服务配置",
+                "summary": "ADMINService configuration",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -1346,7 +1346,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "APP服务配置",
+                "description": "APPService configuration",
                 "consumes": [
                     "application/json"
                 ],
@@ -1356,7 +1356,7 @@ const docTemplateadmin = `{
                 "tags": [
                     "ADMIN"
                 ],
-                "summary": "APP服务配置",
+                "summary": "APPService configuration",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -1380,7 +1380,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "服务配置,给webclient提供api-server",
+                "description": "Service configuration,forwebclientProvideapi-server",
                 "consumes": [
                     "application/json"
                 ],
@@ -1390,7 +1390,7 @@ const docTemplateadmin = `{
                 "tags": [
                     "ADMIN"
                 ],
-                "summary": "RUSTDESK服务配置",
+                "summary": "RUSTDESKService configuration",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -1414,7 +1414,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建设备群组",
+                "description": "CreateDeviceGroup",
                 "consumes": [
                     "application/json"
                 ],
@@ -1422,12 +1422,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备群组"
+                    "DeviceGroup"
                 ],
-                "summary": "创建设备群组",
+                "summary": "CreateDeviceGroup",
                 "parameters": [
                     {
-                        "description": "设备群组信息",
+                        "description": "DeviceGroupInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1471,7 +1471,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备群组删除",
+                "description": "DeviceGroupDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -1479,12 +1479,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备群组"
+                    "DeviceGroup"
                 ],
-                "summary": "设备群组删除",
+                "summary": "DeviceGroupDelete",
                 "parameters": [
                     {
-                        "description": "群组信息",
+                        "description": "GroupInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1516,7 +1516,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备群组详情",
+                "description": "DeviceGroupDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -1524,9 +1524,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备群组"
+                    "DeviceGroup"
                 ],
-                "summary": "设备群组详情",
+                "summary": "DeviceGroupDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -1571,7 +1571,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "群组列表",
+                "description": "GroupList",
                 "consumes": [
                     "application/json"
                 ],
@@ -1579,19 +1579,19 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "群组"
+                    "Group"
                 ],
-                "summary": "群组列表",
+                "summary": "GroupList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     }
@@ -1631,7 +1631,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备群组编辑",
+                "description": "DeviceGroupEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -1639,12 +1639,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备群组"
+                    "DeviceGroup"
                 ],
-                "summary": "设备群组编辑",
+                "summary": "DeviceGroupEdit",
                 "parameters": [
                     {
-                        "description": "群组信息",
+                        "description": "GroupInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1688,7 +1688,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "获取ossToken",
+                "description": "GetossToken",
                 "consumes": [
                     "application/json"
                 ],
@@ -1696,9 +1696,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "文件"
+                    "File"
                 ],
-                "summary": "获取ossToken",
+                "summary": "GetossToken",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -1722,7 +1722,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "上传文件到本地",
+                "description": "Upload file locally",
                 "consumes": [
                     "multipart/form-data"
                 ],
@@ -1730,13 +1730,13 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "文件"
+                    "File"
                 ],
-                "summary": "上传文件到本地",
+                "summary": "Upload file locally",
                 "parameters": [
                     {
                         "type": "file",
-                        "description": "上传文件示例",
+                        "description": "File upload example",
                         "name": "file",
                         "in": "formData",
                         "required": true
@@ -1765,7 +1765,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建群组",
+                "description": "CreateGroup",
                 "consumes": [
                     "application/json"
                 ],
@@ -1773,12 +1773,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "群组"
+                    "Group"
                 ],
-                "summary": "创建群组",
+                "summary": "CreateGroup",
                 "parameters": [
                     {
-                        "description": "群组信息",
+                        "description": "GroupInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1822,7 +1822,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "群组删除",
+                "description": "GroupDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -1830,12 +1830,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "群组"
+                    "Group"
                 ],
-                "summary": "群组删除",
+                "summary": "GroupDelete",
                 "parameters": [
                     {
-                        "description": "群组信息",
+                        "description": "GroupInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -1867,7 +1867,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "群组详情",
+                "description": "GroupDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -1875,9 +1875,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "群组"
+                    "Group"
                 ],
-                "summary": "群组详情",
+                "summary": "GroupDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -1922,7 +1922,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "群组列表",
+                "description": "GroupList",
                 "consumes": [
                     "application/json"
                 ],
@@ -1930,19 +1930,19 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "群组"
+                    "Group"
                 ],
-                "summary": "群组列表",
+                "summary": "GroupList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     }
@@ -1982,7 +1982,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "群组编辑",
+                "description": "GroupEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -1990,12 +1990,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "群组"
+                    "Group"
                 ],
-                "summary": "群组编辑",
+                "summary": "GroupEdit",
                 "parameters": [
                     {
-                        "description": "群组信息",
+                        "description": "GroupInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2039,7 +2039,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录",
+                "description": "Login",
                 "consumes": [
                     "application/json"
                 ],
@@ -2047,12 +2047,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录"
+                    "Login"
                 ],
-                "summary": "登录",
+                "summary": "Login",
                 "parameters": [
                     {
-                        "description": "登录信息",
+                        "description": "LoginInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2091,7 +2091,7 @@ const docTemplateadmin = `{
         },
         "/admin/login-options": {
             "post": {
-                "description": "登录选项",
+                "description": "Login options",
                 "consumes": [
                     "application/json"
                 ],
@@ -2099,9 +2099,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录"
+                    "Login"
                 ],
-                "summary": "登录选项",
+                "summary": "Login options",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -2128,7 +2128,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志批量删除",
+                "description": "Batch delete login logs",
                 "consumes": [
                     "application/json"
                 ],
@@ -2136,12 +2136,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录日志"
+                    "Login Log"
                 ],
-                "summary": "登录日志批量删除",
+                "summary": "Batch delete login logs",
                 "parameters": [
                     {
-                        "description": "登录日志",
+                        "description": "Login Log",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2173,7 +2173,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志删除",
+                "description": "Login LogDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -2181,12 +2181,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录日志"
+                    "Login Log"
                 ],
-                "summary": "登录日志删除",
+                "summary": "Login LogDelete",
                 "parameters": [
                     {
-                        "description": "登录日志信息",
+                        "description": "Login LogInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2218,7 +2218,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志详情",
+                "description": "Login LogDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -2226,9 +2226,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录日志"
+                    "Login Log"
                 ],
-                "summary": "登录日志详情",
+                "summary": "Login LogDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -2273,7 +2273,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志列表",
+                "description": "Login LogList",
                 "consumes": [
                     "application/json"
                 ],
@@ -2281,25 +2281,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录日志"
+                    "Login Log"
                 ],
-                "summary": "登录日志列表",
+                "summary": "Login LogList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户ID",
+                        "description": "UserID",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -2334,7 +2334,7 @@ const docTemplateadmin = `{
         },
         "/admin/logout": {
             "post": {
-                "description": "登出",
+                "description": "Logout",
                 "consumes": [
                     "application/json"
                 ],
@@ -2342,9 +2342,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录"
+                    "Login"
                 ],
-                "summary": "登出",
+                "summary": "Logout",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -2368,7 +2368,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建地址簿",
+                "description": "CreateAddress Book",
                 "consumes": [
                     "application/json"
                 ],
@@ -2376,12 +2376,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿"
+                    "MineAddress Book"
                 ],
-                "summary": "创建地址簿",
+                "summary": "CreateAddress Book",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2425,7 +2425,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿删除",
+                "description": "Address BookDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -2433,12 +2433,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿"
+                    "MineAddress Book"
                 ],
-                "summary": "地址簿删除",
+                "summary": "Address BookDelete",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2470,7 +2470,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿列表",
+                "description": "Address BookList",
                 "consumes": [
                     "application/json"
                 ],
@@ -2478,25 +2478,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿"
+                    "MineAddress Book"
                 ],
-                "summary": "地址簿列表",
+                "summary": "Address BookList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -2536,7 +2536,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿编辑",
+                "description": "Address BookEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -2544,12 +2544,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿"
+                    "MineAddress Book"
                 ],
-                "summary": "地址簿编辑",
+                "summary": "Address BookEdit",
                 "parameters": [
                     {
-                        "description": "地址簿信息",
+                        "description": "Address BookInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2593,7 +2593,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建地址簿名称",
+                "description": "Create address book name",
                 "consumes": [
                     "application/json"
                 ],
@@ -2601,12 +2601,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿名称"
+                    "MineAddress Book Name"
                 ],
-                "summary": "创建地址簿名称",
+                "summary": "Create address book name",
                 "parameters": [
                     {
-                        "description": "地址簿名称信息",
+                        "description": "Address Book NameInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2650,7 +2650,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称删除",
+                "description": "Address Book NameDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -2658,12 +2658,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿名称"
+                    "MineAddress Book Name"
                 ],
-                "summary": "地址簿名称删除",
+                "summary": "Address Book NameDelete",
                 "parameters": [
                     {
-                        "description": "地址簿名称信息",
+                        "description": "Address Book NameInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2695,7 +2695,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称列表",
+                "description": "Address Book NameList",
                 "consumes": [
                     "application/json"
                 ],
@@ -2703,19 +2703,19 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿名称"
+                    "MineAddress Book Name"
                 ],
-                "summary": "地址簿名称列表",
+                "summary": "Address Book NameList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     }
@@ -2755,7 +2755,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿名称编辑",
+                "description": "Address Book NameEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -2763,12 +2763,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿名称"
+                    "MineAddress Book Name"
                 ],
-                "summary": "地址簿名称编辑",
+                "summary": "Address Book NameEdit",
                 "parameters": [
                     {
-                        "description": "地址簿名称信息",
+                        "description": "Address Book NameInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2812,7 +2812,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建地址簿规则",
+                "description": "Create address book rule",
                 "consumes": [
                     "application/json"
                 ],
@@ -2820,12 +2820,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿规则"
+                    "MineAddress Book Rule"
                 ],
-                "summary": "创建地址簿规则",
+                "summary": "Create address book rule",
                 "parameters": [
                     {
-                        "description": "地址簿规则信息",
+                        "description": "Address Book RuleInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2869,7 +2869,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则删除",
+                "description": "Address Book RuleDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -2877,12 +2877,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿规则"
+                    "MineAddress Book Rule"
                 ],
-                "summary": "地址簿规则删除",
+                "summary": "Address Book RuleDelete",
                 "parameters": [
                     {
-                        "description": "地址簿规则信息",
+                        "description": "Address Book RuleInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -2914,7 +2914,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则列表",
+                "description": "Address Book RuleList",
                 "consumes": [
                     "application/json"
                 ],
@@ -2922,37 +2922,37 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿规则"
+                    "MineAddress Book Rule"
                 ],
-                "summary": "地址簿规则列表",
+                "summary": "Address Book RuleList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "是否是我的",
+                        "description": "Whether it is mine",
                         "name": "is_my",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "地址簿集合id",
+                        "description": "Address book collection ID",
                         "name": "collection_id",
                         "in": "query"
                     }
@@ -2992,7 +2992,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "地址簿规则编辑",
+                "description": "Address Book RuleEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -3000,12 +3000,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的地址簿规则"
+                    "MineAddress Book Rule"
                 ],
-                "summary": "地址簿规则编辑",
+                "summary": "Address Book RuleEdit",
                 "parameters": [
                     {
-                        "description": "地址簿规则信息",
+                        "description": "Address Book RuleInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3049,7 +3049,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志批量删除",
+                "description": "Batch delete login logs",
                 "consumes": [
                     "application/json"
                 ],
@@ -3057,12 +3057,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的登录日志"
+                    "MineLogin Log"
                 ],
-                "summary": "登录日志批量删除",
+                "summary": "Batch delete login logs",
                 "parameters": [
                     {
-                        "description": "登录日志",
+                        "description": "Login Log",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3094,7 +3094,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志删除",
+                "description": "Login LogDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -3102,12 +3102,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的登录日志"
+                    "MineLogin Log"
                 ],
-                "summary": "登录日志删除",
+                "summary": "Login LogDelete",
                 "parameters": [
                     {
-                        "description": "登录日志信息",
+                        "description": "Login LogInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3139,7 +3139,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录日志列表",
+                "description": "Login LogList",
                 "consumes": [
                     "application/json"
                 ],
@@ -3147,25 +3147,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的登录日志"
+                    "MineLogin Log"
                 ],
-                "summary": "登录日志列表",
+                "summary": "Login LogList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户ID",
+                        "description": "UserID",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -3205,7 +3205,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备列表",
+                "description": "DeviceList",
                 "consumes": [
                     "application/json"
                 ],
@@ -3213,25 +3213,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的设备"
+                    "MineDevice"
                 ],
-                "summary": "设备列表",
+                "summary": "DeviceList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "时间",
+                        "description": "Time",
                         "name": "time_ago",
                         "in": "query"
                     },
@@ -3243,13 +3243,13 @@ const docTemplateadmin = `{
                     },
                     {
                         "type": "string",
-                        "description": "主机名",
+                        "description": "Hostname",
                         "name": "hostname",
                         "in": "query"
                     },
                     {
                         "type": "string",
-                        "description": "uuids 用逗号分隔",
+                        "description": "uuids Separated by commas",
                         "name": "uuids",
                         "in": "query"
                     }
@@ -3289,7 +3289,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "批量删除我的分享记录",
+                "description": "Batch delete my share records",
                 "consumes": [
                     "application/json"
                 ],
@@ -3297,9 +3297,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的"
+                    "Mine"
                 ],
-                "summary": "批量删除我的分享记录",
+                "summary": "Batch delete my share records",
                 "parameters": [
                     {
                         "description": "id",
@@ -3334,7 +3334,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "分享记录删除",
+                "description": "Share RecordDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -3342,12 +3342,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的分享记录"
+                    "MineShare Record"
                 ],
-                "summary": "分享记录删除",
+                "summary": "Share RecordDelete",
                 "parameters": [
                     {
-                        "description": "分享记录信息",
+                        "description": "Share RecordInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3379,7 +3379,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "分享记录列表",
+                "description": "Share RecordList",
                 "consumes": [
                     "application/json"
                 ],
@@ -3387,19 +3387,19 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的分享记录"
+                    "MineShare Record"
                 ],
-                "summary": "分享记录列表",
+                "summary": "Share RecordList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     }
@@ -3427,7 +3427,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建标签",
+                "description": "CreateTag",
                 "consumes": [
                     "application/json"
                 ],
@@ -3435,12 +3435,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的标签"
+                    "MineTag"
                 ],
-                "summary": "创建标签",
+                "summary": "CreateTag",
                 "parameters": [
                     {
-                        "description": "标签信息",
+                        "description": "TagInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3484,7 +3484,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签删除",
+                "description": "TagDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -3492,12 +3492,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "标签"
+                    "Tag"
                 ],
-                "summary": "标签删除",
+                "summary": "TagDelete",
                 "parameters": [
                     {
-                        "description": "标签信息",
+                        "description": "TagInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3529,7 +3529,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签列表",
+                "description": "TagList",
                 "consumes": [
                     "application/json"
                 ],
@@ -3537,31 +3537,31 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的标签"
+                    "MineTag"
                 ],
-                "summary": "标签列表",
+                "summary": "TagList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "是否是我的",
+                        "description": "Whether it is mine",
                         "name": "is_my",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -3601,7 +3601,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签编辑",
+                "description": "TagEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -3609,12 +3609,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "我的标签"
+                    "MineTag"
                 ],
-                "summary": "标签编辑",
+                "summary": "TagEdit",
                 "parameters": [
                     {
-                        "description": "标签信息",
+                        "description": "TagInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3658,7 +3658,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建Oauth",
+                "description": "CreateOauth",
                 "consumes": [
                     "application/json"
                 ],
@@ -3668,10 +3668,10 @@ const docTemplateadmin = `{
                 "tags": [
                     "Oauth"
                 ],
-                "summary": "创建Oauth",
+                "summary": "CreateOauth",
                 "parameters": [
                     {
-                        "description": "Oauth信息",
+                        "description": "OauthInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3715,7 +3715,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "Oauth删除",
+                "description": "OauthDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -3725,10 +3725,10 @@ const docTemplateadmin = `{
                 "tags": [
                     "Oauth"
                 ],
-                "summary": "Oauth删除",
+                "summary": "OauthDelete",
                 "parameters": [
                     {
-                        "description": "Oauth信息",
+                        "description": "OauthInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3760,7 +3760,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "Oauth详情",
+                "description": "OauthDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -3770,7 +3770,7 @@ const docTemplateadmin = `{
                 "tags": [
                     "Oauth"
                 ],
-                "summary": "Oauth详情",
+                "summary": "OauthDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -3815,7 +3815,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "Oauth列表",
+                "description": "OauthList",
                 "consumes": [
                     "application/json"
                 ],
@@ -3825,17 +3825,17 @@ const docTemplateadmin = `{
                 "tags": [
                     "Oauth"
                 ],
-                "summary": "Oauth列表",
+                "summary": "OauthList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     }
@@ -3875,7 +3875,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "Oauth编辑",
+                "description": "OauthEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -3885,10 +3885,10 @@ const docTemplateadmin = `{
                 "tags": [
                     "Oauth"
                 ],
-                "summary": "Oauth编辑",
+                "summary": "OauthEdit",
                 "parameters": [
                     {
-                        "description": "Oauth信息",
+                        "description": "OauthInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -3989,7 +3989,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "批量设备删除",
+                "description": "Batch delete devices",
                 "consumes": [
                     "application/json"
                 ],
@@ -3997,12 +3997,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备"
+                    "Device"
                 ],
-                "summary": "批量设备删除",
+                "summary": "Batch delete devices",
                 "parameters": [
                     {
-                        "description": "设备id",
+                        "description": "Deviceid",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4034,7 +4034,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建设备",
+                "description": "CreateDevice",
                 "consumes": [
                     "application/json"
                 ],
@@ -4042,12 +4042,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备"
+                    "Device"
                 ],
-                "summary": "创建设备",
+                "summary": "CreateDevice",
                 "parameters": [
                     {
-                        "description": "设备信息",
+                        "description": "DeviceInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4091,7 +4091,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备删除",
+                "description": "DeviceDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -4099,12 +4099,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备"
+                    "Device"
                 ],
-                "summary": "设备删除",
+                "summary": "DeviceDelete",
                 "parameters": [
                     {
-                        "description": "设备信息",
+                        "description": "DeviceInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4136,7 +4136,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备详情",
+                "description": "DeviceDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -4144,9 +4144,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备"
+                    "Device"
                 ],
-                "summary": "设备详情",
+                "summary": "DeviceDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -4191,7 +4191,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备列表",
+                "description": "DeviceList",
                 "consumes": [
                     "application/json"
                 ],
@@ -4199,25 +4199,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备"
+                    "Device"
                 ],
-                "summary": "设备列表",
+                "summary": "DeviceList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "时间",
+                        "description": "Time",
                         "name": "time_ago",
                         "in": "query"
                     },
@@ -4229,13 +4229,13 @@ const docTemplateadmin = `{
                     },
                     {
                         "type": "string",
-                        "description": "主机名",
+                        "description": "Hostname",
                         "name": "hostname",
                         "in": "query"
                     },
                     {
                         "type": "string",
-                        "description": "uuids 用逗号分隔",
+                        "description": "uuids Separated by commas",
                         "name": "uuids",
                         "in": "query"
                     }
@@ -4275,7 +4275,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "设备编辑",
+                "description": "DeviceEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -4283,12 +4283,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "设备"
+                    "Device"
                 ],
-                "summary": "设备编辑",
+                "summary": "DeviceEdit",
                 "parameters": [
                     {
-                        "description": "设备信息",
+                        "description": "DeviceInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4332,7 +4332,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "批量分享记录",
+                "description": "Batch share records",
                 "consumes": [
                     "application/json"
                 ],
@@ -4340,9 +4340,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "分享记录"
+                    "Share Record"
                 ],
-                "summary": "批量分享记录",
+                "summary": "Batch share records",
                 "parameters": [
                     {
                         "description": "id",
@@ -4377,7 +4377,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "分享记录删除",
+                "description": "Share RecordDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -4385,12 +4385,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "分享记录"
+                    "Share Record"
                 ],
-                "summary": "分享记录删除",
+                "summary": "Share RecordDelete",
                 "parameters": [
                     {
-                        "description": "分享记录信息",
+                        "description": "Share RecordInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4422,7 +4422,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "分享记录列表",
+                "description": "Share RecordList",
                 "consumes": [
                     "application/json"
                 ],
@@ -4430,25 +4430,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "分享记录"
+                    "Share Record"
                 ],
-                "summary": "分享记录列表",
+                "summary": "Share RecordList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "用户ID",
+                        "description": "UserID",
                         "name": "user_id",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     }
@@ -4476,7 +4476,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建标签",
+                "description": "CreateTag",
                 "consumes": [
                     "application/json"
                 ],
@@ -4484,12 +4484,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "标签"
+                    "Tag"
                 ],
-                "summary": "创建标签",
+                "summary": "CreateTag",
                 "parameters": [
                     {
-                        "description": "标签信息",
+                        "description": "TagInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4533,7 +4533,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签删除",
+                "description": "TagDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -4541,12 +4541,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "标签"
+                    "Tag"
                 ],
-                "summary": "标签删除",
+                "summary": "TagDelete",
                 "parameters": [
                     {
-                        "description": "标签信息",
+                        "description": "TagInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4578,7 +4578,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签详情",
+                "description": "TagDetails",
                 "consumes": [
                     "application/json"
                 ],
@@ -4586,9 +4586,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "标签"
+                    "Tag"
                 ],
-                "summary": "标签详情",
+                "summary": "TagDetails",
                 "parameters": [
                     {
                         "type": "integer",
@@ -4633,7 +4633,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签列表",
+                "description": "TagList",
                 "consumes": [
                     "application/json"
                 ],
@@ -4641,31 +4641,31 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "标签"
+                    "Tag"
                 ],
-                "summary": "标签列表",
+                "summary": "TagList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "是否是我的",
+                        "description": "Whether it is mine",
                         "name": "is_my",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户id",
+                        "description": "Userid",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -4705,7 +4705,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "标签编辑",
+                "description": "TagEdit",
                 "consumes": [
                     "application/json"
                 ],
@@ -4713,12 +4713,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "标签"
+                    "Tag"
                 ],
-                "summary": "标签编辑",
+                "summary": "TagEdit",
                 "parameters": [
                     {
-                        "description": "标签信息",
+                        "description": "TagInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4762,7 +4762,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "修改当前用户密码",
+                "description": "Change current user password",
                 "consumes": [
                     "application/json"
                 ],
@@ -4770,12 +4770,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "修改当前用户密码",
+                "summary": "Change current user password",
                 "parameters": [
                     {
-                        "description": "用户信息",
+                        "description": "UserInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4807,7 +4807,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "创建管理员",
+                "description": "Create administrator",
                 "consumes": [
                     "application/json"
                 ],
@@ -4815,12 +4815,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "创建管理员",
+                "summary": "Create administrator",
                 "parameters": [
                     {
-                        "description": "管理员信息",
+                        "description": "Administrator information",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4864,7 +4864,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "当前用户",
+                "description": "Current user",
                 "consumes": [
                     "application/json"
                 ],
@@ -4872,9 +4872,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "当前用户",
+                "summary": "Current user",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -4910,7 +4910,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "管理员编删除",
+                "description": "Edit/delete administrator",
                 "consumes": [
                     "application/json"
                 ],
@@ -4918,12 +4918,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "管理员删除",
+                "summary": "Delete administrator",
                 "parameters": [
                     {
-                        "description": "用户信息",
+                        "description": "UserInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -4955,7 +4955,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "管理员详情",
+                "description": "Administrator details",
                 "consumes": [
                     "application/json"
                 ],
@@ -4963,9 +4963,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "管理员详情",
+                "summary": "Administrator details",
                 "parameters": [
                     {
                         "type": "integer",
@@ -5010,7 +5010,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "管理员列表",
+                "description": "Administrator list",
                 "consumes": [
                     "application/json"
                 ],
@@ -5018,25 +5018,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "管理员列表",
+                "summary": "Administrator list",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "账户",
+                        "description": "Account",
                         "name": "username",
                         "in": "query"
                     }
@@ -5076,7 +5076,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "我的授权",
+                "description": "My authorizations",
                 "consumes": [
                     "application/json"
                 ],
@@ -5084,9 +5084,9 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "我的授权",
+                "summary": "My authorizations",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -5125,7 +5125,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "管理员编辑",
+                "description": "Edit administrator",
                 "consumes": [
                     "application/json"
                 ],
@@ -5133,12 +5133,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "管理员编辑",
+                "summary": "Edit administrator",
                 "parameters": [
                     {
-                        "description": "用户信息",
+                        "description": "UserInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -5182,7 +5182,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "修改密码",
+                "description": "Change password",
                 "consumes": [
                     "application/json"
                 ],
@@ -5190,12 +5190,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "用户"
+                    "User"
                 ],
-                "summary": "修改密码",
+                "summary": "Change password",
                 "parameters": [
                     {
-                        "description": "用户信息",
+                        "description": "UserInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -5227,7 +5227,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录凭证批量删除",
+                "description": "Batch delete login credentials",
                 "consumes": [
                     "application/json"
                 ],
@@ -5235,12 +5235,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录凭证"
+                    "Login Credential"
                 ],
-                "summary": "登录凭证批量删除",
+                "summary": "Batch delete login credentials",
                 "parameters": [
                     {
-                        "description": "登录凭证信息",
+                        "description": "Login CredentialInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -5272,7 +5272,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录凭证删除",
+                "description": "Login CredentialDelete",
                 "consumes": [
                     "application/json"
                 ],
@@ -5280,12 +5280,12 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录凭证"
+                    "Login Credential"
                 ],
-                "summary": "登录凭证删除",
+                "summary": "Login CredentialDelete",
                 "parameters": [
                     {
-                        "description": "登录凭证信息",
+                        "description": "Login CredentialInformation",
                         "name": "body",
                         "in": "body",
                         "required": true,
@@ -5317,7 +5317,7 @@ const docTemplateadmin = `{
                         "token": []
                     }
                 ],
-                "description": "登录凭证列表",
+                "description": "Login CredentialList",
                 "consumes": [
                     "application/json"
                 ],
@@ -5325,25 +5325,25 @@ const docTemplateadmin = `{
                     "application/json"
                 ],
                 "tags": [
-                    "登录凭证"
+                    "Login Credential"
                 ],
-                "summary": "登录凭证列表",
+                "summary": "Login CredentialList",
                 "parameters": [
                     {
                         "type": "integer",
-                        "description": "页码",
+                        "description": "Page number",
                         "name": "page",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "页大小",
+                        "description": "Page size",
                         "name": "page_size",
                         "in": "query"
                     },
                     {
                         "type": "integer",
-                        "description": "用户ID",
+                        "description": "UserID",
                         "name": "user_id",
                         "in": "query"
                     }
@@ -5685,7 +5685,7 @@ const docTemplateadmin = `{
                     "type": "string"
                 },
                 "password_type": {
-                    "description": "只能是once,fixed",
+                    "description": "Can only beonce,fixed",
                     "type": "string",
                     "enum": [
                         "once",
@@ -5741,7 +5741,7 @@ const docTemplateadmin = `{
                     "type": "string"
                 },
                 "email": {
-                    "description": "validate:\"required,email\" email不强制",
+                    "description": "validate:\"required,email\" emailNot enforced",
                     "type": "string"
                 },
                 "group_id": {
@@ -5968,7 +5968,7 @@ const docTemplateadmin = `{
                     "type": "integer"
                 },
                 "rule": {
-                    "description": "0: 无 1: 读 2: 读写  3: 完全控制",
+                    "description": "0: None 1: Read 2: Read/Write  3: Full control",
                     "type": "integer",
                     "maximum": 3,
                     "minimum": 1
@@ -5977,7 +5977,7 @@ const docTemplateadmin = `{
                     "type": "integer"
                 },
                 "type": {
-                    "description": "1: 个人 2: 群组",
+                    "description": "1: Personal 2: Group",
                     "type": "integer",
                     "maximum": 2,
                     "minimum": 1
@@ -6400,8 +6400,8 @@ const docTemplateadmin = `{
                 2
             ],
             "x-enum-comments": {
-                "COMMON_STATUS_DISABLED": "通用状态 禁用",
-                "COMMON_STATUS_ENABLE": "通用状态 启用"
+                "COMMON_STATUS_DISABLED": "General status Disabled",
+                "COMMON_STATUS_ENABLE": "General status Enabled"
             },
             "x-enum-varnames": [
                 "COMMON_STATUS_ENABLE",
@@ -6418,7 +6418,7 @@ const docTemplateadmin = `{
                     "type": "integer"
                 },
                 "color": {
-                    "description": "color 是flutter的颜色值,从0x00000000 到 0xFFFFFFFF; 前两位表示透明度，后面6位表示颜色, 可以转成rgba",
+                    "description": "color is a Flutter color value ranging from 0x00000000 to 0xFFFFFFFF; the first two digits represent opacity, the remaining six represent the color; it can be converted to RGBA",
                     "type": "integer"
                 },
                 "created_at": {
@@ -6603,8 +6603,8 @@ var SwaggerInfoadmin = &swag.Spec{
 	Host:             "",
 	BasePath:         "/api",
 	Schemes:          []string{},
-	Title:            "管理系统API",
-	Description:      "接口",
+	Title:            "Management SystemAPI",
+	Description:      "API",
 	InfoInstanceName: "admin",
 	SwaggerTemplate:  docTemplateadmin,
 	LeftDelim:        "{{",

@@ -6,23 +6,23 @@ import (
 	"time"
 )
 
-// 安全策略配置
+// SecurityPolicy defines the security policy configuration
 type SecurityPolicy struct {
-	CaptchaThreshold int // 尝试失败次数达到验证码阈值，小于0表示不启用, 0表示强制启用
-	BanThreshold     int // 尝试失败次数达到封禁阈值，为0表示不启用
+	CaptchaThreshold int // Number of failed attempts that triggers the captcha; negative means disabled, 0 means always required
+	BanThreshold     int // Number of failed attempts that triggers a ban; 0 means disabled
 	AttemptsWindow   time.Duration
 	BanDuration      time.Duration
 }
 
-// 验证码提供者接口
+// CaptchaProvider is the interface for captcha providers
 type CaptchaProvider interface {
 	Generate() (id string, content string, answer string, err error)
 	//Validate(ip, code string) bool
-	Expiration() time.Duration           // 验证码过期时间, 应该小于 AttemptsWindow
-	Draw(content string) (string, error) // 绘制验证码
+	Expiration() time.Duration           // Captcha expiration time; should be less than AttemptsWindow
+	Draw(content string) (string, error) // Render the captcha image
 }
 
-// 验证码元数据
+// CaptchaMeta holds the metadata for a generated captcha
 type CaptchaMeta struct {
 	Id        string
 	Content   string
@@ -30,13 +30,13 @@ type CaptchaMeta struct {
 	ExpiresAt time.Time
 }
 
-// IP封禁记录
+// BanRecord holds the details of a banned IP entry
 type BanRecord struct {
 	ExpiresAt time.Time
 	Reason    string
 }
 
-// 登录限制器
+// LoginLimiter enforces login rate limiting and banning
 type LoginLimiter struct {
 	mu          sync.Mutex
 	policy      SecurityPolicy
@@ -55,7 +55,7 @@ var defaultSecurityPolicy = SecurityPolicy{
 }
 
 func NewLoginLimiter(policy SecurityPolicy) *LoginLimiter {
-	// 设置默认值
+	// Set default values
 	if policy.AttemptsWindow == 0 {
 		policy.AttemptsWindow = 5 * time.Minute
 	}
@@ -74,19 +74,19 @@ func NewLoginLimiter(policy SecurityPolicy) *LoginLimiter {
 	return ll
 }
 
-// 注册验证码提供者
+// RegisterProvider registers a captcha provider
 func (ll *LoginLimiter) RegisterProvider(p CaptchaProvider) {
 	ll.mu.Lock()
 	defer ll.mu.Unlock()
 	ll.provider = p
 }
 
-// isDisabled 检查是否禁用登录限制
+// isDisabled reports whether login limiting is disabled
 func (ll *LoginLimiter) isDisabled() bool {
 	return ll.policy.CaptchaThreshold < 0 && ll.policy.BanThreshold == 0
 }
 
-// 记录登录失败尝试
+// RecordFailedAttempt records a failed login attempt for the given IP
 func (ll *LoginLimiter) RecordFailedAttempt(ip string) {
 	if ll.isDisabled() {
 		return
@@ -101,14 +101,14 @@ func (ll *LoginLimiter) RecordFailedAttempt(ip string) {
 	now := time.Now()
 	windowStart := now.Add(-ll.policy.AttemptsWindow)
 
-	// 清理过期尝试
+	// Remove expired attempts
 	validAttempts := ll.pruneAttempts(ip, windowStart)
 
-	// 记录新尝试
+	// Record the new attempt
 	validAttempts = append(validAttempts, now)
 	ll.attempts[ip] = validAttempts
 
-	// 检查封禁条件
+	// Check whether the ban threshold is reached
 	if ll.policy.BanThreshold > 0 && len(validAttempts) >= ll.policy.BanThreshold {
 		ll.banIP(ip, "excessive failed attempts")
 		return
@@ -117,7 +117,7 @@ func (ll *LoginLimiter) RecordFailedAttempt(ip string) {
 	return
 }
 
-// 生成验证码
+// RequireCaptcha generates a new captcha and returns its metadata
 func (ll *LoginLimiter) RequireCaptcha() (error, CaptchaMeta) {
 	ll.mu.Lock()
 	defer ll.mu.Unlock()
@@ -131,7 +131,7 @@ func (ll *LoginLimiter) RequireCaptcha() (error, CaptchaMeta) {
 		return err, CaptchaMeta{}
 	}
 
-	// 存储验证码
+	// Store the captcha
 	ll.captchas[id] = CaptchaMeta{
 		Id:        id,
 		Content:   content,
@@ -142,29 +142,29 @@ func (ll *LoginLimiter) RequireCaptcha() (error, CaptchaMeta) {
 	return nil, ll.captchas[id]
 }
 
-// 验证验证码
+// VerifyCaptcha verifies a captcha answer by ID
 func (ll *LoginLimiter) VerifyCaptcha(id, answer string) bool {
 	ll.mu.Lock()
 	defer ll.mu.Unlock()
 
-	// 查找匹配验证码
+	// Look up the matching captcha
 	if ll.provider == nil {
 		return false
 	}
 
-	// 获取并验证验证码
+	// Retrieve and validate the captcha
 	captcha, exists := ll.captchas[id]
 	if !exists {
 		return false
 	}
 
-	// 清理过期验证码
+	// Remove expired captcha
 	if time.Now().After(captcha.ExpiresAt) {
 		delete(ll.captchas, id)
 		return false
 	}
 
-	// 验证并清理状态
+	// Verify the answer and clean up state
 	if answer == captcha.Answer {
 		delete(ll.captchas, id)
 		return true
@@ -178,7 +178,7 @@ func (ll *LoginLimiter) DrawCaptcha(content string) (err error, str string) {
 	return
 }
 
-// 清除记录窗口
+// RemoveAttempts clears the attempt record for the given IP
 func (ll *LoginLimiter) RemoveAttempts(ip string) {
 	ll.mu.Lock()
 	defer ll.mu.Unlock()
@@ -189,7 +189,7 @@ func (ll *LoginLimiter) RemoveAttempts(ip string) {
 	}
 }
 
-// CheckSecurityStatus 检查安全状态
+// CheckSecurityStatus checks the security status for the given IP
 func (ll *LoginLimiter) CheckSecurityStatus(ip string) (banned bool, captchaRequired bool) {
 	if ll.isDisabled() {
 		return
@@ -197,21 +197,21 @@ func (ll *LoginLimiter) CheckSecurityStatus(ip string) (banned bool, captchaRequ
 	ll.mu.Lock()
 	defer ll.mu.Unlock()
 
-	// 检查封禁状态
+	// Check ban status
 	if banned, _ = ll.isBanned(ip); banned {
 		return
 	}
 
-	// 清理过期数据
+	// Remove expired attempt data
 	ll.pruneAttempts(ip, time.Now().Add(-ll.policy.AttemptsWindow))
 
-	// 检查验证码要求
+	// Check whether a captcha is required
 	captchaRequired = len(ll.attempts[ip]) >= ll.policy.CaptchaThreshold
 
 	return
 }
 
-// 后台清理任务
+// cleanupRoutine runs a background goroutine that periodically cleans up expired records
 func (ll *LoginLimiter) cleanupRoutine() {
 	ticker := time.NewTicker(1 * time.Minute)
 	defer ticker.Stop()
@@ -226,7 +226,7 @@ func (ll *LoginLimiter) cleanupRoutine() {
 	}
 }
 
-// 内部工具方法
+// Internal utility methods
 func (ll *LoginLimiter) isBanned(ip string) (bool, BanRecord) {
 	record, exists := ll.bannedIPs[ip]
 	if !exists {
@@ -277,19 +277,19 @@ func (ll *LoginLimiter) cleanupExpired() {
 
 	now := time.Now()
 
-	// 清理封禁记录
+	// Remove expired ban records
 	for ip, record := range ll.bannedIPs {
 		if now.After(record.ExpiresAt) {
 			delete(ll.bannedIPs, ip)
 		}
 	}
 
-	// 清理尝试记录
+	// Remove expired attempt records
 	for ip := range ll.attempts {
 		ll.pruneAttempts(ip, now.Add(-ll.policy.AttemptsWindow))
 	}
 
-	// 清理验证码
+	// Remove expired captchas
 	for id := range ll.captchas {
 		ll.pruneCaptchas(id)
 	}

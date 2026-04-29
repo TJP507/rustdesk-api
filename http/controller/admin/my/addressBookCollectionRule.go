@@ -13,17 +13,17 @@ import (
 type AddressBookCollectionRule struct {
 }
 
-// List 列表
-// @Tags 我的地址簿规则
-// @Summary 地址簿规则列表
-// @Description 地址簿规则列表
+// List List
+// @Tags MyAddressBookCollectionRule
+// @Summary Address book collection rule list
+// @Description Address book collection rule list
 // @Accept  json
 // @Produce  json
-// @Param page query int false "页码"
-// @Param page_size query int false "页大小"
-// @Param is_my query int false "是否是我的"
-// @Param user_id query int false "用户id"
-// @Param collection_id query int false "地址簿集合id"
+// @Param page query int false "Page number"
+// @Param page_size query int false "Page size"
+// @Param is_my query int false "Whether it is mine"
+// @Param user_id query int false "User ID"
+// @Param collection_id query int false "Address book collection ID"
 // @Success 200 {object} response.Response{data=model.AddressBookCollectionList}
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection_rule/list [get]
@@ -46,13 +46,13 @@ func (abcr *AddressBookCollectionRule) List(c *gin.Context) {
 	response.Success(c, res)
 }
 
-// Create 创建地址簿规则
-// @Tags 我的地址簿规则
-// @Summary 创建地址簿规则
-// @Description 创建地址簿规则
+// Create Create address book collection rule
+// @Tags MyAddressBookCollectionRule
+// @Summary Create address book collection rule
+// @Description Create address book collection rule
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollectionRule true "地址簿规则信息"
+// @Param body body model.AddressBookCollectionRule true "Address book collection rule information"
 // @Success 200 {object} response.Response{data=model.AddressBookCollection}
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection_rule/create [post]
@@ -106,12 +106,12 @@ func (abcr *AddressBookCollectionRule) CheckForm(u *model.User, t *model.Address
 		if tou.Id == 0 {
 			return "ItemNotFound", false
 		}
-		//非管理员不能分享给非本组织用户
+		//non-admin users cannot share with users outside their organization
 		//if tou.GroupId != u.GroupId {
 		//	return "NoAccess", false
 		//}
 	} else if t.Type == model.ShareAddressBookRuleTypeGroup {
-		//非管理员不能分享给其他组
+		//non-admin users cannot share with other groups
 		//if t.ToId != u.GroupId {
 		//	return "NoAccess", false
 		//}
@@ -123,7 +123,7 @@ func (abcr *AddressBookCollectionRule) CheckForm(u *model.User, t *model.Address
 	} else {
 		return "ParamsError", false
 	}
-	// 重复检查
+	// duplicate check
 	ex := service.AllService.AddressBookService.RuleInfoByToIdAndCid(t.Type, t.ToId, t.CollectionId)
 	if t.Id == 0 && ex.Id > 0 {
 		return "ItemExists", false
@@ -134,13 +134,13 @@ func (abcr *AddressBookCollectionRule) CheckForm(u *model.User, t *model.Address
 	return "", true
 }
 
-// Update 编辑
-// @Tags 我的地址簿规则
-// @Summary 地址簿规则编辑
-// @Description 地址簿规则编辑
+// Update Edit
+// @Tags MyAddressBookCollectionRule
+// @Summary Edit address book collection rule
+// @Description Edit address book collection rule
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollectionRule true "地址簿规则信息"
+// @Param body body model.AddressBookCollectionRule true "Address book collection rule information"
 // @Success 200 {object} response.Response{data=model.AddressBookCollection}
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection_rule/update [post]
@@ -185,13 +185,13 @@ func (abcr *AddressBookCollectionRule) Update(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// Delete 删除
-// @Tags 我的地址簿规则
-// @Summary 地址簿规则删除
-// @Description 地址簿规则删除
+// Delete Delete
+// @Tags MyAddressBookCollectionRule
+// @Summary Delete address book collection rule
+// @Description Delete address book collection rule
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollectionRule true "地址簿规则信息"
+// @Param body body model.AddressBookCollectionRule true "Address book collection rule information"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection_rule/delete [post]

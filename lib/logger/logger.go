@@ -27,7 +27,7 @@ func New(c *Config) *log.Logger {
 		//FieldsOrder:     []string{"name", "age"},
 	})
 
-	// 日志文件
+	// Log file
 	f := c.Path
 	var write io.Writer
 	if f != "" {

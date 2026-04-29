@@ -13,13 +13,13 @@ import (
 type AddressBookCollection struct {
 }
 
-// Create 创建地址簿名称
-// @Tags 我的地址簿名称
-// @Summary 创建地址簿名称
-// @Description 创建地址簿名称
+// Create Create address book collection
+// @Tags MyAddressBookCollection
+// @Summary Create address book collection
+// @Description Create address book collection
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollection true "地址簿名称信息"
+// @Param body body model.AddressBookCollection true "Address book collection information"
 // @Success 200 {object} response.Response{data=model.AddressBookCollection}
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection/create [post]
@@ -45,14 +45,14 @@ func (abc *AddressBookCollection) Create(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// List 列表
-// @Tags 我的地址簿名称
-// @Summary 地址簿名称列表
-// @Description 地址簿名称列表
+// List List
+// @Tags MyAddressBookCollection
+// @Summary Address book collection list
+// @Description Address book collection list
 // @Accept  json
 // @Produce  json
-// @Param page query int false "页码"
-// @Param page_size query int false "页大小"
+// @Param page query int false "Page number"
+// @Param page_size query int false "Page size"
 // @Success 200 {object} response.Response{data=model.AddressBookCollectionList}
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection/list [get]
@@ -71,13 +71,13 @@ func (abc *AddressBookCollection) List(c *gin.Context) {
 	response.Success(c, res)
 }
 
-// Update 编辑
-// @Tags 我的地址簿名称
-// @Summary 地址簿名称编辑
-// @Description 地址簿名称编辑
+// Update Edit
+// @Tags MyAddressBookCollection
+// @Summary Edit address book collection
+// @Description Edit address book collection
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollection true "地址簿名称信息"
+// @Param body body model.AddressBookCollection true "Address book collection information"
 // @Success 200 {object} response.Response{data=model.AddressBookCollection}
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection/update [post]
@@ -120,13 +120,13 @@ func (abc *AddressBookCollection) Update(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// Delete 删除
-// @Tags 我的地址簿名称
-// @Summary 地址簿名称删除
-// @Description 地址簿名称删除
+// Delete Delete
+// @Tags MyAddressBookCollection
+// @Summary Delete address book collection
+// @Description Delete address book collection
 // @Accept  json
 // @Produce  json
-// @Param body body model.AddressBookCollection true "地址簿名称信息"
+// @Param body body model.AddressBookCollection true "Address book collection information"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/my/address_book_collection/delete [post]

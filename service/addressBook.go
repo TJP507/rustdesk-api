@@ -53,29 +53,30 @@ func (s *AddressBookService) AddAddressBook(ab *model.AddressBook) error {
 
 // UpdateAddressBook
 func (s *AddressBookService) UpdateAddressBook(abs []*model.AddressBook, userId uint) error {
-	//比较peers和数据库中的数据，如果peers中的数据在数据库中不存在，则添加，如果存在则更新，如果数据库中的数据在peers中不存在，则删除
-	// 开始事务
+	// Compare peers with database records: add entries that exist in peers but not in the database,
+	// update entries that exist in both, and delete entries that exist in the database but not in peers.
+	// Begin transaction
 	tx := DB.Begin()
-	//1. 获取数据库中的数据
+	//1. Fetch records from the database
 	var dbABs []*model.AddressBook
 	tx.Where("user_id = ?", userId).Find(&dbABs)
-	//2. 比较peers和数据库中的数据
-	//2.1 获取peers中的id
+	//2. Compare peers with database records
+	//2.1 Get IDs from peers
 	aBIds := make(map[string]*model.AddressBook)
 	for _, ab := range abs {
 		aBIds[ab.Id] = ab
 	}
-	//2.2 获取数据库中的id
+	//2.2 Get IDs from the database
 	dbABIds := make(map[string]*model.AddressBook)
 	for _, dbAb := range dbABs {
 		dbABIds[dbAb.Id] = dbAb
 	}
-	//2.3 比较peers和数据库中的数据
+	//2.3 Compare peers with database records
 	for id, ab := range aBIds {
 		dbAB, ok := dbABIds[id]
 		ab.UserId = userId
 		if !ok {
-			//添加
+			// Add
 			if ab.Platform == "" || ab.Username == "" || ab.Hostname == "" {
 				peer := AllService.PeerService.FindById(ab.Id)
 				if peer.RowId != 0 {
@@ -86,11 +87,11 @@ func (s *AddressBookService) UpdateAddressBook(abs []*model.AddressBook, userId 
 			}
 			tx.Create(ab)
 		} else {
-			//更新
+			// Update
 			tx.Model(&model.AddressBook{}).Where("row_id = ?", dbAB.RowId).Updates(ab)
 		}
 	}
-	//2.4 删除
+	//2.4 Delete
 	for id, dbAB := range dbABIds {
 		_, ok := aBIds[id]
 		if !ok {
@@ -126,7 +127,7 @@ func (s *AddressBookService) FromPeer(peer *model.Peer) (a *model.AddressBook) {
 	return a
 }
 
-// Create 创建
+// Create
 func (s *AddressBookService) Create(u *model.AddressBook) error {
 	res := DB.Create(u).Error
 	return res
@@ -135,22 +136,22 @@ func (s *AddressBookService) Delete(u *model.AddressBook) error {
 	return DB.Delete(u).Error
 }
 
-// Update 更新
+// Update
 func (s *AddressBookService) Update(u *model.AddressBook) error {
 	return DB.Model(u).Updates(u).Error
 }
 
-// UpdateByMap 更新
+// UpdateByMap
 func (s *AddressBookService) UpdateByMap(u *model.AddressBook, data map[string]interface{}) error {
 	return DB.Model(u).Updates(data).Error
 }
 
-// UpdateAll 更新
+// UpdateAll
 func (s *AddressBookService) UpdateAll(u *model.AddressBook) error {
 	return DB.Model(u).Select("*").Omit("created_at").Updates(u).Error
 }
 
-// ShareByWebClient 分享
+// ShareByWebClient
 func (s *AddressBookService) ShareByWebClient(m *model.ShareRecord) error {
 	m.ShareToken = uuid.New().String()
 	return DB.Create(m).Error
@@ -279,7 +280,7 @@ func (s *AddressBookService) UpdateCollection(t *model.AddressBookCollection) er
 }
 
 func (s *AddressBookService) DeleteCollection(t *model.AddressBookCollection) error {
-	//删除集合下的所有规则、地址簿，再删除集合
+	// Delete all rules and address book entries under the collection, then delete the collection itself
 	tx := DB.Begin()
 	tx.Where("collection_id = ?", t.Id).Delete(&model.AddressBookCollectionRule{})
 	tx.Where("collection_id = ?", t.Id).Delete(&model.AddressBook{})
@@ -326,7 +327,7 @@ func (s *AddressBookService) DeleteRule(t *model.AddressBookCollectionRule) erro
 	return DB.Delete(t).Error
 }
 
-// CheckCollectionOwner 检查Collection的所有者
+// CheckCollectionOwner checks the owner of a collection
 func (s *AddressBookService) CheckCollectionOwner(uid uint, cid uint) bool {
 	p := s.CollectionInfoById(cid)
 	return p.UserId == uid

@@ -308,7 +308,7 @@ Download the release from [release](https://github.com/lejianwen/rustdesk-api/re
        - RUSTDESK_API_JWT_KEY=xxxxxx # jwt key
      volumes:
        - /data/rustdesk/server:/data
-       - /data/rustdesk/api:/app/data #将数据库挂载
+       - /data/rustdesk/api:/app/data #mount the database volume
      networks:
        - rustdesk-net
      restart: unless-stopped

@@ -25,7 +25,7 @@ func (r *Rustdesk) CmdList(c *gin.Context) {
 		return
 	}
 	res := service.AllService.ServerCmdService.List(q.Page, 9999)
-	//在列表前添加系统命令
+	//prepend system commands to the list
 	list := make([]*model.ServerCmd, 0)
 	list = append(list, model.SysIdServerCmds...)
 	list = append(list, model.SysRelayServerCmds...)

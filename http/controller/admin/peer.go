@@ -14,10 +14,10 @@ import (
 type Peer struct {
 }
 
-// Detail 设备
-// @Tags 设备
-// @Summary 设备详情
-// @Description 设备详情
+// Detail Peer
+// @Tags Peer
+// @Summary Peer detail
+// @Description Peer detail
 // @Accept  json
 // @Produce  json
 // @Param id path int true "ID"
@@ -37,13 +37,13 @@ func (ct *Peer) Detail(c *gin.Context) {
 	return
 }
 
-// Create 创建设备
-// @Tags 设备
-// @Summary 创建设备
-// @Description 创建设备
+// Create Create peer
+// @Tags Peer
+// @Summary Create peer
+// @Description Create peer
 // @Accept  json
 // @Produce  json
-// @Param body body admin.PeerForm true "设备信息"
+// @Param body body admin.PeerForm true "Peer information"
 // @Success 200 {object} response.Response{data=model.Peer}
 // @Failure 500 {object} response.Response
 // @Router /admin/peer/create [post]
@@ -68,18 +68,18 @@ func (ct *Peer) Create(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// List 列表
-// @Tags 设备
-// @Summary 设备列表
-// @Description 设备列表
+// List List
+// @Tags Peer
+// @Summary Peer list
+// @Description Peer list
 // @Accept  json
 // @Produce  json
-// @Param page query int false "页码"
-// @Param page_size query int false "页大小"
-// @Param time_ago query int false "时间"
+// @Param page query int false "Page number"
+// @Param page_size query int false "Page size"
+// @Param time_ago query int false "Time"
 // @Param id query string false "ID"
-// @Param hostname query string false "主机名"
-// @Param uuids query string false "uuids 用逗号分隔"
+// @Param hostname query string false "Hostname"
+// @Param uuids query string false "UUIDs, comma-separated"
 // @Success 200 {object} response.Response{data=model.PeerList}
 // @Failure 500 {object} response.Response
 // @Router /admin/peer/list [get]
@@ -121,13 +121,13 @@ func (ct *Peer) List(c *gin.Context) {
 	response.Success(c, res)
 }
 
-// Update 编辑
-// @Tags 设备
-// @Summary 设备编辑
-// @Description 设备编辑
+// Update Edit
+// @Tags Peer
+// @Summary Edit peer
+// @Description Edit peer
 // @Accept  json
 // @Produce  json
-// @Param body body admin.PeerForm true "设备信息"
+// @Param body body admin.PeerForm true "Peer information"
 // @Success 200 {object} response.Response{data=model.Peer}
 // @Failure 500 {object} response.Response
 // @Router /admin/peer/update [post]
@@ -156,13 +156,13 @@ func (ct *Peer) Update(c *gin.Context) {
 	response.Success(c, nil)
 }
 
-// Delete 删除
-// @Tags 设备
-// @Summary 设备删除
-// @Description 设备删除
+// Delete Delete
+// @Tags Peer
+// @Summary Delete peer
+// @Description Delete peer
 // @Accept  json
 // @Produce  json
-// @Param body body admin.PeerForm true "设备信息"
+// @Param body body admin.PeerForm true "Peer information"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/peer/delete [post]
@@ -192,13 +192,13 @@ func (ct *Peer) Delete(c *gin.Context) {
 	response.Fail(c, 101, response.TranslateMsg(c, "ItemNotFound"))
 }
 
-// BatchDelete 批量删除
-// @Tags 设备
-// @Summary 批量设备删除
-// @Description 批量设备删除
+// BatchDelete Batch delete
+// @Tags Peer
+// @Summary Batch delete peers
+// @Description Batch delete peers
 // @Accept  json
 // @Produce  json
-// @Param body body admin.PeerBatchDeleteForm true "设备id"
+// @Param body body admin.PeerBatchDeleteForm true "Peer IDs"
 // @Success 200 {object} response.Response
 // @Failure 500 {object} response.Response
 // @Router /admin/peer/batchDelete [post]
@@ -232,7 +232,7 @@ func (ct *Peer) SimpleData(c *gin.Context) {
 		return
 	}
 	res := service.AllService.PeerService.List(1, 99999, func(tx *gorm.DB) {
-		//可以公开的情报
+		//publicly available information
 		tx.Select("id,version")
 		tx.Where("id in (?)", f.Ids)
 	})
